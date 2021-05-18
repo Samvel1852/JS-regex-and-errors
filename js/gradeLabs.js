@@ -14,7 +14,8 @@ function gradeLabs(labs) {
       let result = lab.runLab(3);
       console.log(`${lab.student} code worked: ${result === 27}`);
     } catch (err) {
-      throw "Error thrown";
+      throw new Error("Error thrown");
+      // console.log(err.message);
     }
   }
 }
